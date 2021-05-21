@@ -16,6 +16,9 @@ public class NumberGuessController {
 	public NumberGuessController(MainController mainController) {
 		this.mainController = mainController;
 		startSetup();
+		while (true) {
+			generateNumber(10);
+		}
 	}
 	
 	private void startSetup() {
@@ -37,7 +40,8 @@ public class NumberGuessController {
 	
 	private void generateNumber(int bound) {
 		Random random = new Random();
-		number = random.nextInt(bound);
+		number = random.nextInt(bound) + 1;
+		System.out.println(number);
 	}
 	
 	public void guess(int number) {
