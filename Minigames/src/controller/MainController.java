@@ -27,11 +27,14 @@ public class MainController extends Application{
 	
 	public void goToMenu() {
 		menuPane = new MenuPane(this);
-		scene.setRoot(menuPane);
+		setPane(menuPane);
 	}
 	
 	public void goToNumberGuesser() {
-		numberGuessController = new NumberGuessController();
-		scene.setRoot(numberGuessController.getView());
+		numberGuessController = new NumberGuessController(this);
+	}
+	
+	public void setPane(Pane p) {
+		scene.setRoot(p);
 	}
 }
