@@ -16,9 +16,6 @@ public class NumberGuessController {
 	public NumberGuessController(MainController mainController) {
 		this.mainController = mainController;
 		startSetup();
-		while (true) {
-			generateNumber(10);
-		}
 	}
 	
 	private void startSetup() {
